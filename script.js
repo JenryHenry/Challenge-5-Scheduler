@@ -3,12 +3,6 @@
 // in the html.
 var saveButtons = $(".saveBtn");
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
   saveButtons.on("click", function (event) {
     var btn = $(event.target);
     // determine the textarea name from data attributes
@@ -18,7 +12,6 @@ $(function () {
     // save the value of the textarea to local storage using the same name.
     localStorage.setItem(selectHour, textVal);
     // console.log(selHour);
-    // key name will be hour-#
   });
   // set the textarea values
   for (var hour = 9; hour <= 17; hour++) {
